@@ -5,10 +5,7 @@ Calificación del laboratorio
 
 import sys
 
-import soluciones
-
-# import preguntas
-preguntas = soluciones
+import preguntas
 
 
 def test_01():
@@ -46,7 +43,7 @@ def test_02():
         "s": 32,
         "c": 4,
     }
-    X_train.iloc[:, 1].value_counts().to_dict() == {
+    assert X_train.iloc[:, 1].value_counts().to_dict() == {
         "y": 3219,
         "s": 2542,
         "f": 2309,
